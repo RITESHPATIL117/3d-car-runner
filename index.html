@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Three.js Car Runner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="hud">
+        <div class="hud-item">Score: <span id="score">0</span></div>
+        <div class="hud-item">Speed: <span id="speed">0</span> km/h</div>
+        <div class="hud-item">Turbo: <span id="turbo">100%</span></div>
+        <span class="push"></span>
+        <div class="hud-item">Best: <span id="highscore">0</span></div>
+    </div>
+    <div id="game-over" class="hidden">
+        <div class="dialog">
+            <h1>Game Over</h1>
+            <p>Final Score: <span id="final-score">0</span></p>
+            <button id="restart-btn">Restart</button>
+        </div>
+    </div>
+
+    <canvas id="game"></canvas>
+
+    <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+    <script src="src/main.js"></script>
+</body>
+</html>
+

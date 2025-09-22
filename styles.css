@@ -1,0 +1,70 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    background: #0a0a0a;
+    color: #fff;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+#game {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+}
+
+#hud {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
+
+#hud .push { flex: 1; }
+
+.hud-item {
+    background: rgba(0,0,0,0.4);
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.12);
+}
+
+#game-over.hidden { display: none; }
+
+#game-over {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    display: grid;
+    place-items: center;
+    z-index: 20;
+}
+
+#game-over .dialog {
+    background: #111;
+    padding: 24px 28px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+#restart-btn {
+    margin-top: 12px;
+    padding: 10px 16px;
+    background: #00d1b2;
+    color: #012d28;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#restart-btn:hover {
+    filter: brightness(1.1);
+}
+
